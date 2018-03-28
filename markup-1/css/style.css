@@ -1,0 +1,230 @@
+
+@font-face {
+    font-family: 'gentium_book_basicbold';
+    src: url('../fonts/genbkbasb-webfont.woff2') format('woff2'), url('../fonts/genbkbasb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yeseva_oneregular';
+    src: url('../fonts/yesevaone-regular_v2-webfont.woff2') format('woff2'), url('../fonts/yesevaone-regular_v2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular-webfont.woff2') format('woff2'), url('../fonts/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../image/pattern.png');
+}
+
+header {
+    width: 1600px;
+    height: 110px;
+    position: fixed;
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+}
+
+main {
+    width: 1600px;
+    flex: 1 0 auto;
+}
+
+footer {
+    width: 1600px;
+    height: 320px;
+    background-color: brown;
+    flex: 0 0 auto;
+}
+
+.header-content{
+    display: inline-block;
+    margin-left: calc(50% - 800px);
+    height: 110px;
+}
+
+.logo{
+    display: inline-block;
+    padding-left: 180px;
+    padding-top: 48px;
+}
+
+.menu {
+    margin-left: 209px;
+    display: inline-block;
+    position: relative;
+    bottom: 7px;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 40px 22px 0px 25px;
+    cursor: pointer;
+    padding-bottom: 40px;
+}
+
+nav ul li:hover {
+    border-top: 4px solid white;
+    transition: .3s;
+}
+
+nav ul li:last-child {
+    padding: 40px 15px 0px 25px;
+}
+
+nav ul li a {
+    font-family: gentium_book_basicbold;
+    font-size: 21px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.social-icon i {
+    color: #dab33e;
+    font-size: 21px;
+    padding-right: 13px;
+}
+
+.social-icon i:hover {
+    color: white;
+}
+
+.social-icon {
+    display: inline-block;
+    position: relative;
+    bottom: 7px;
+}
+
+.promo {
+    background-image: url(../image/main/promo-background.jpg);
+    width: 100%;
+    height: 750px;
+}
+.about {
+    width: 100%;
+    height: 710px;
+}
+.slogan-text {
+    display: inline-block;
+    height: 150px;
+    text-align: center;
+    max-width: 1000px;
+    margin-left: calc(50% - 500px);
+    margin-top: 216px;
+}
+
+.slogan-text h2 {
+    font-family: yeseva_oneregular;
+    font-size: 90px;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    line-height: 1.33;
+}
+
+.devider-promo {
+    display: inline-block;
+    margin-left: calc(50% - 113px);
+    margin-top: 108px;
+}
+
+.button-book-a-table {
+    text-decoration: none;
+    border: 1px solid black;
+    font-family: latoregular;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    width: 226px;
+    height: 55px;
+    text-align: center;
+    line-height: 3;
+    background-color: rgba(6,8,8,0.6);
+    margin-left: calc(50% - 244px);
+    margin-right: 27px;
+    margin-top: 34px;
+}
+
+.button-book-a-table:hover {
+    background-color: rgba(6,8,8,0.8);
+}
+
+.button-see-the-menu {
+    text-decoration: none;
+    border: 1px solid white;
+    font-family: latoregular;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    width: 226px;
+    height: 55px;
+    text-align: center;
+    line-height: 3;
+    background-color: rgba(255,255,255,0.25);
+}
+
+.button-see-the-menu:hover {
+    background-color: rgba(255,255,255,0.45);
+}
+
+.article-about {
+    margin-left: calc(50% - 515px);
+    max-width: 430px;
+    vertical-align: 90px;
+    display: inline-block;
+}
+
+.article-about h3 {
+    font-family: yeseva_oneregular;
+    color: rgb(204, 153, 0);
+    font-size: 36px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.devider-about {
+    display: block;
+    text-align: center;
+    margin-top: 11px;
+}
+
+.figure-cook {
+    margin-top: 26px;
+}
+
+.figure-cook figcaption{
+    font-family: latoregular;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    display: block;
+}
+
+.cook {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 8px;
+}
+
+.dish {
+    display: inline-block;
+    margin-left: 29px;
+    margin-top: 55px;
+}
