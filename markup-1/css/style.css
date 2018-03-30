@@ -20,10 +20,24 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('opensans-bold-webfont.woff2') format('woff2'), url('opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url('opensans-italic-webfont.woff2') format('woff2'), url('opensans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
-  }
+}
 
 body {
     height: 100%;
@@ -292,11 +306,18 @@ nav ul li a {
     height: 994px;
 }
 
-.wrapper-menu {
-    display: block;
-    margin-left: calc(50% - 526px);
-    margin-top: 100px;
-    max-width: 1200px;
+.menu-column-left {
+    display: inline-block;
+    margin-left: calc(50% - 525px);
+    margin-top: 99px;
+    max-width: 595px;
+}
+
+.menu-column-right {
+    display: inline-block;
+    margin-top: 99px;
+    max-width: 595px;
+    vertical-align: bottom;
 }
 
 .dish {
@@ -355,7 +376,7 @@ nav ul li a {
     display: inline-block;
     margin-right: 145px;
     vertical-align:text-top;
-    margin-bottom: 28px;
+    margin-bottom: 29px;
 }
 
 .dish-special {
@@ -411,13 +432,111 @@ nav ul li a {
     display: block;
     text-align: center;
     margin-top: 13px;
-    margin-right: 2px;
+    margin-right: 0px;
 }
 
-.article-reviews p {
+.reviews-text {
     font-family: gentium_book_basicbold;
-    color: white;
+    color: #dde0df;
     font-size: 25px;
+    font-weight: 100;
     text-align: center;
-    max-height: 200px;
+    max-width: 640px;
+    display: block;
+    margin: 18px auto auto auto;
+    line-height: 45px;
+}
+
+.reviews-signature {
+    font-family: latoregular;
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+    display: block;
+    margin: 30px auto auto auto;
+}
+
+.reviews-quotes {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #989998;
+    font-size: 96px;
+    position: absolute;
+    margin-left: 28px;
+}
+
+.reservations {
+    width: 100%;
+    height: 710px;
+}
+
+.reservations-pictures {
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: calc(50% - 611px);
+}
+
+.reservations-pictures img{
+    margin-left: 26px;
+}
+
+.article-reservations {
+    display: inline-block;
+    margin-top: 96px;
+    width: 420px;
+    vertical-align: top;
+    margin-left: 100px;
+}
+
+.article-reservations h3 {
+    font-family: yeseva_oneregular;
+    color: rgb(204, 153, 0);
+    font-size: 36px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.devider-reservations {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: 5px;
+    margin-bottom: 27px;
+}
+
+.figure-reservations figcaption{
+    font-family: latoregular;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    display: block;
+    color: black;
+    letter-spacing: 0px;
+}
+
+.figure-reservations hr {
+    height: 8px;
+    visibility: hidden;
+}
+
+.form-element {
+    text-decoration: none;
+    border: 1px solid rgb(200, 198, 198);
+    font-family: open_sansitalic;
+    font-size: 16px;
+    color:rgb(124, 124, 124);
+    display: inline-block;
+    width: 200px;
+    height: 35px;
+    text-align: right;
+    line-height: 3;
+    background-color: rgba(255,255,255,0.25);
+}
+
+.reservation-form {
+    text-decoration: none;
+    font-family: open_sansbold;
+    font-size: 14px;
+    color:rgb(201, 161, 49);
+    display: inline-block;
 }

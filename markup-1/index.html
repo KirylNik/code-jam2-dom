@@ -82,7 +82,7 @@
                 </article>
             </section>
             <section class="food-menu">
-                <div class="wrapper-menu">
+                <div class="menu-column-left">
                     <section class="category-dishes">
                         <h3>Appetisers</h3>
                         <span class="devider-menu">
@@ -105,22 +105,6 @@
                         </article>
                     </section>
                     <section class="category-dishes">
-                            <h3>Starters</h3>
-                            <span class="devider-menu">
-                                    <img src="image/devider-small.png" alt="">
-                            </span>
-                            <article class="dish">
-                                <h4 class="dish-name">Haloumi</h4>
-                                <span class="dish-price">$3.99</span>
-                                <span class="dish-description">Refreshing traditional cucumber and garlic yoghurt dip.</span>
-                            </article>
-                            <article class="dish">
-                                <h4 class="dish-name">Spinach_Pie</h4>
-                                <span class="dish-price">$5.50</span>
-                                <span class="dish-description">Pureed eggplant, garlic, green pepper and tomato dip.</span>
-                            </article>
-                    </section>
-                    <section class="category-dishes">
                         <h3>Salads</h3>
                         <span class="devider-menu">
                                 <img src="image/devider-small.png" alt="">
@@ -140,6 +124,24 @@
                         <article class="dish">
                             <h4 class="dish-name">Gusto Salad</h4>
                             <span class="dish-price">$5.25</span>
+                            <span class="dish-description">Pureed eggplant, garlic, green pepper and tomato dip.</span>
+                        </article>
+                    </section>
+                </div>
+                <div class="menu-column-right">
+                    <section class="category-dishes">
+                        <h3>Starters</h3>
+                        <span class="devider-menu">
+                                <img src="image/devider-small.png" alt="">
+                        </span>
+                        <article class="dish">
+                            <h4 class="dish-name">Haloumi</h4>
+                            <span class="dish-price">$3.99</span>
+                            <span class="dish-description">Refreshing traditional cucumber and garlic yoghurt dip.</span>
+                        </article>
+                        <article class="dish">
+                            <h4 class="dish-name">Spinach_Pie</h4>
+                            <span class="dish-price">$5.50</span>
                             <span class="dish-description">Pureed eggplant, garlic, green pepper and tomato dip.</span>
                         </article>
                     </section>
@@ -178,14 +180,62 @@
                     <span class="devider-ingredients">
                         <img src="image/devider-small-gray.png" alt="">
                     </span>
-                        <p>
-                            If you’ve been to one of our restaurants, you’ve seen –
-                            and tasted – what keeps our customers coming back for
-                            more. Perfect materials and freshly baked food,
-                            delicious Lambda cakes,  muffins, and gourmet coffees 
-                            make us hard to resist! Stop in today and check us out!
-                        </p>
+                    <span class="reviews-quotes">“</span>
+                    <p class="reviews-text">
+                        If you’ve been to one of our restaurants, you’ve seen –
+                        and tasted – what keeps our customers coming back for
+                        more. Perfect materials and freshly baked food,
+                        delicious Lambda cakes, muffins, and gourmet coffees 
+                        make us hard to resist! Stop in today and check us out!
+                    </p>
+                    <p class="reviews-signature">  food inc, New York</p>
                 </article>
+            </section>
+            <section class="reservations">
+                <figure class="reservations-pictures">
+                    <img src="image/reservations-picture1.jpg" alt="">
+                    <img src="image/reservations-picture2.jpg" alt="">
+                </figure>
+                <article class="article-reservations">
+                    <h3>Just the right food</h3>
+                    <span class="devider-reservations">
+                        <img src="image/devider-small.png" alt="">
+                    </span>
+                        <figure class="figure-reservations">
+                           <figcaption>
+                                If you’ve been to one of our restaurants, you’ve seen – and
+                                tasted – what keeps our customers coming back for more.
+                                Perfect materials and freshly baked food.
+                                <hr>
+                                Delicious Lambda cakes,  muffins, and gourmet coffees make
+                                us hard to resist! Stop in today and check us out! Perfect
+                                materials and freshly baked food.
+                            </figcaption>
+                        </figure>
+                </article>
+                <form action="#" method="GET" class="reservation-form">
+                    <label>
+                        Name
+                        <input type="name" placeholder="your name*" name="name" class="form-element">
+                    </label>
+                    <label>
+                        E-mail
+                        <input type="email" placeholder="email *" name="email" class="form-element">
+                    </label>
+                    <label>
+                        Date
+                        <input type="date" name="date" class="form-element">
+                    </label>
+                    <label>
+                        Party number
+                        <select name="partyNumber" class="form-element">
+                                <option value="party namber">party namber</option>
+                                <option value="001">001</option>
+                                <option value="002">002</option>
+                                <option value="003">003</option> 
+                        </select>
+                    </label>
+                </form>
             </section>
         </main>
         <footer>
