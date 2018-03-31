@@ -34,6 +34,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('opensans-regular-webfont.woff2') format('woff2'),
+    url('opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -44,10 +52,11 @@ body {
     display: flex;
     flex-direction: column;
     background-image: url('../image/pattern.png');
+
 }
 
 header {
-    width: 1600px;
+    width: 100%;
     height: 110px;
     position: fixed;
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
@@ -56,13 +65,17 @@ header {
 main {
     width: 1600px;
     flex: 1 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
-    width: 1600px;
+    width: 100%;
     height: 320px;
-    background-color: brown;
+    background-color: rgb(25, 25, 25);
     flex: 0 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header-content{
@@ -126,7 +139,7 @@ nav ul li a {
 }
 
 .promo {
-    background-image: url(../image/main/promo-background.jpg);
+    background-image: url(../image/promo-background.jpg);
     width: 100%;
     height: 750px;
 }
@@ -527,16 +540,67 @@ nav ul li a {
     color:rgb(124, 124, 124);
     display: inline-block;
     width: 200px;
-    height: 35px;
+    height: 36px;
     text-align: right;
     line-height: 3;
     background-color: rgba(255,255,255,0.25);
+    margin-bottom: 25px;
+    padding-left: 15px;
+    text-align: left;
+}
+.reservation-input-column-left {
+    display: inline-block;
+    margin-right: 26px;
+}
+
+.reservation-input-column-right {
+    display: inline-block;
 }
 
 .reservation-form {
+    display: inline-block;
+    max-width: 480px;
+    margin-left: calc(50% + 85px);
+    margin-top: -214px;
+}
+
+.reservation-form-labels {
     text-decoration: none;
     font-family: open_sansbold;
     font-size: 14px;
     color:rgb(201, 161, 49);
-    display: inline-block;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="date"]::before {
+	color: rgb(124, 124, 124);
+	content: attr(placeholder);
+}
+input[type="date"] {
+	color: #ffffff;
+}
+input[type="date"]:focus,
+input[type="date"]:valid {
+	color: #666666;
+}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+	content: "" !important;
+}
+
+.reservation-form input[type="submit"]{
+    border: 0px;
+    text-decoration: none;
+    font-family: open_sansregular;
+    font-size: 16px;
+    color: white;
+    display: block;
+    width: 200px;
+    height: 36px;
+    text-align: center;
+    background-color: rgb(201,161,49);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
 }
