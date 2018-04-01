@@ -388,13 +388,14 @@ nav ul li a {
     margin-top: 59px;
     max-width: 595px;
     padding-right: 5px;
+    vertical-align: top;
 }
 
 .menu-column-right {
     display: inline-block;
     margin-top: 59px;
     max-width: 595px;
-    vertical-align: bottom;
+    vertical-align: top;
 }
 
 .dish {
