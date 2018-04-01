@@ -82,24 +82,37 @@ footer {
     display: inline-block;
     margin-left: calc(50% - 800px);
     height: 110px;
+    font-size: 0;
 }
 
 .logo{
     display: inline-block;
     margin-left: 190px;
-    margin-top: 48px;
+    margin-top: 47px;
+}
+
+.logo img {
+    transition: all 1s ease-out;
+}
+    
+.logo img:hover{
+    transform: scale(1.1);
 }
 
 .menu {
-    margin-left: 209px;
+    margin-left: 213px;
     display: inline-block;
     position: relative;
-    bottom: 7px;
+    bottom: 6px;
+}
+
+header h1 {
+    display: none;
 }
 
 nav ul li{
     display: inline-block;
-    padding: 40px 22px 0px 25px;
+    padding: 41px 25px 0px 26px;
     cursor: pointer;
     padding-bottom: 40px;
 }
@@ -125,7 +138,7 @@ nav ul li a {
 .social-icon i {
     color: #dab33e;
     font-size: 21px;
-    padding-right: 13px;
+    padding-right: 16px;
 }
 
 .social-icon i:hover {
@@ -135,7 +148,8 @@ nav ul li a {
 .social-icon {
     display: inline-block;
     position: relative;
-    bottom: 7px;
+    bottom: 6px;
+    margin-left: 5px;
 }
 
 .promo {
