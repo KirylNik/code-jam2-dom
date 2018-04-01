@@ -66,11 +66,6 @@ header {
 }
 
 main {
-    width: 1600px;
-    flex: 1 0 auto;
-    margin-left: auto;
-    margin-right: auto;
-  
 }
 
 footer {
@@ -123,7 +118,7 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-    font-family: gentium_book_basicbold;
+    font-family: gentium_book_basicbold, Arial, Helvetica, sans-serif;
     font-size: 21px;
     color: white;
     text-decoration: none;
@@ -167,12 +162,12 @@ nav ul li a {
     height: 150px;
     text-align: center;
     max-width: 1000px;
-    margin-left: calc(50% - 500px);
-    margin-top: 216px;
+    margin-left: calc(50% - 530px);
+    margin-top: 176px;
 }
 
 .slogan-text h2 {
-    font-family: yeseva_oneregular;
+    font-family: yeseva_oneregular, Arial, Helvetica, sans-serif;
     font-size: 90px;
     color: white;
     text-decoration: none;
@@ -187,12 +182,14 @@ nav ul li a {
     background-image: url('../image/devider-big.png');
     position: relative;
     display: inline-block;
+    top: 20px;
+    left: 4px;
 }
 
 .button-book-a-table {
     text-decoration: none;
     border: 1px solid black;
-    font-family: latoregular;
+    font-family: latoregular, Arial, Helvetica, sans-serif;
     font-size: 18px;
     color: white;
     display: inline-block;
@@ -201,9 +198,9 @@ nav ul li a {
     text-align: center;
     line-height: 3;
     background-color: rgba(6,8,8,0.6);
-    margin-left: calc(50% - 244px);
-    margin-right: 27px;
-    margin-top: 34px;
+    margin-left: calc(50% - 274px);
+    margin-right: 30px;
+    margin-top: 54px;
     text-transform: uppercase;
 }
 
@@ -214,7 +211,7 @@ nav ul li a {
 .button-see-the-menu {
     text-decoration: none;
     border: 1px solid white;
-    font-family: latoregular;
+    font-family: latoregular, Arial, Helvetica, sans-serif;
     font-size: 18px;
     color: white;
     display: inline-block;
@@ -231,14 +228,14 @@ nav ul li a {
 }
 
 .about-content {
-    margin-left: calc(50% - 515px);
+    margin-left: calc(50% - 545px);
     max-width: 430px;
-    vertical-align: 89px;
+    vertical-align: 74px;
     display: inline-block;
 }
 
 .about-content h3 {
-    font-family: yeseva_oneregular;
+    font-family: yeseva_oneregular, Arial, Helvetica, sans-serif;
     color: rgb(204, 153, 0);
     font-size: 36px;
     font-weight: 100;
@@ -252,14 +249,16 @@ nav ul li a {
     background-image: url('../image/devider-small.png');
     position: relative;
     display: inline-block;
+    top: 1px;
+    right: 4px;
 }
 
 .figure-cook {
-    margin-top: 22px;
+    margin-top: 18px;
 }
 
 .figure-cook figcaption{
-    font-family: latoregular;
+    font-family: latoregular, Arial, Helvetica, sans-serif;
     font-size: 16px;
     text-align: center;
     line-height: 1.5;
@@ -287,22 +286,22 @@ nav ul li a {
 
 .article-ingredients {
     background-color: rgba(6,8,8,0.6);
-    width: 570px;
-    min-height: 557px;
+    width: 550px;
+    min-height: 537px;
     display: inline-block;
-    margin-left: calc(50% + 15px);
-    margin-top: 100px;
+    margin-left: calc(50% - 15px);
+    margin-top: 60px;
     font-size: 0px;
     padding: 10px;
 }
 
 .article-ingredients h3 {
-    font-family: yeseva_oneregular;
+    font-family: yeseva_oneregular, Arial, Helvetica, sans-serif;
     color: white;
     font-size: 36px;
     font-weight: 100;
     text-align: center;
-    margin-top: 75px;
+    margin-top: 65px;
 }
 
 .article-ingredients h3:after {
@@ -314,6 +313,7 @@ nav ul li a {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 12px;
 }
 
 
@@ -326,6 +326,7 @@ nav ul li a {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 13px;
 }
 
 
@@ -338,42 +339,55 @@ nav ul li a {
 }
 
 .figure-ingredients figcaption{
-    font-family: latoregular;
+    font-family: latoregular, Arial, Helvetica, sans-serif;
     color: white;
     font-size: 16px;
     text-align: center;
     line-height: 1.5;
     display: block;
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0px;
 }
 
 .ingredients-image {
     max-width: 420px;
-    margin-top: 65px;
+    margin-top: 67px;
     display: inline-block;
+    margin-left: 81px;
 }
 
 .ingredients-image img {
-    padding: 0 9px 0 12px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid rgba(74,65,58,0.5);
+    margin-right: 30px;
 }
 
 .food-menu {
     width: 100%;
     min-height: 914px;
     font-size: 0px;
-    padding: 40px;
+    padding: 40px 40px 33px 40px;
     background-image: url('../image/pattern-menu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .menu-column-left {
     display: inline-block;
-    margin-left: calc(50% - 525px);
-    margin-top: 99px;
+    margin-left: calc(50% - 555px);
+    margin-top: 59px;
     max-width: 595px;
+    padding-right: 5px;
 }
 
 .menu-column-right {
     display: inline-block;
-    margin-top: 99px;
+    margin-top: 59px;
     max-width: 595px;
     vertical-align: bottom;
 }
@@ -387,7 +401,7 @@ nav ul li a {
 }
 
 .food-menu h3 {
-    font-family: yeseva_oneregular;
+    font-family: yeseva_oneregular, Arial, Helvetica, sans-serif;
     color: rgb(204, 153, 0);
     font-size: 36px;
     font-weight: 100;
@@ -395,7 +409,7 @@ nav ul li a {
 }
 
 .dish-name {
-    font-family: yeseva_oneregular;
+    font-family: yeseva_oneregular, Arial, Helvetica, sans-serif;
     color: rgb(204, 153, 0);
     font-size: 21px;
     font-weight: 100;
@@ -404,7 +418,7 @@ nav ul li a {
     padding-bottom: 5px;
 }
 .dish-price {
-    font-family: yeseva_oneregular;
+    font-family: yeseva_oneregular, Arial, Helvetica, sans-serif;
     color: rgb(204, 153, 0);
     font-size: 21px;
     font-weight: 100;
@@ -414,7 +428,7 @@ nav ul li a {
 }
 
 .dish-description {
-    font-family: latoregular;
+    font-family: latoregular, Arial, Helvetica, sans-serif;
     color: black;
     font-size: 16px;
     display: block;
@@ -437,6 +451,10 @@ nav ul li a {
     background-image: url('../image/devider-small.png');
     background-position: center;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    margin-bottom: 27px;
 }
 
 .dish-special {
@@ -454,13 +472,13 @@ nav ul li a {
     width: 69px;
     height: 22px;
     background-color: rgba(204, 153, 0, 0.6);
-    font-family: latoregular;
+    font-family: latoregular, Arial, Helvetica, sans-serif;
     text-align: center;
     color: white;
     font-size: 14px;
     position: relative;
     display: inline-block;
-    left: 243px;
+    left: 244px;
     top: -32px;
 }
 
@@ -473,25 +491,25 @@ nav ul li a {
 
 .article-reviews {
     background-color: rgba(0,0,0,0.8);
-    width: 770px;
-    min-height: 557px;
+    width: 750px;
+    min-height: 537px;
     display: inline-block;
-    margin-left: calc(50% - 385px);
-    margin-top: 100px;
+    margin-left: calc(50% - 415px);
+    margin-top: 60px;
     padding: 10px;
 }
 
 .article-reviews h3 {
-    font-family: yeseva_oneregular;
+    font-family: yeseva_oneregular, Arial, Helvetica, sans-serif;
     color: white;
     font-size: 36px;
     font-weight: 100;
     text-align: center;
-    margin-top: 75px;
+    margin-top: 65px;
 }
 
 .reviews-text {
-    font-family: gentium_book_basicbold;
+    font-family: gentium_book_basicbold, Arial, Helvetica, sans-serif;
     color: #dde0df;
     font-size: 25px;
     font-weight: 100;
@@ -503,13 +521,13 @@ nav ul li a {
 }
 
 .reviews-signature {
-    font-family: latoregular;
+    font-family: latoregular, Arial, Helvetica, sans-serif;
     color: white;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
     display: block;
-    margin: 30px auto auto auto;
+    margin: 20px auto auto auto;
 }
 
 .reviews-quotes {
@@ -529,24 +547,24 @@ nav ul li a {
 
 .reservations-pictures {
     display: inline-block;
-    margin-top: 100px;
-    margin-left: calc(50% - 611px);
+    margin-top: 60px;
+    margin-left: calc(50% - 643px);
 }
 
 .reservations-pictures img{
-    margin-left: 26px;
+    margin-left: 30px;
 }
 
 .reservations-text-info {
     display: inline-block;
-    margin-top: 96px;
+    margin-top: 66px;
     width: 420px;
     vertical-align: top;
     margin-left: 100px;
 }
 
 .reservations-text-info h3 {
-    font-family: yeseva_oneregular;
+    font-family: yeseva_oneregular, Arial, Helvetica, sans-serif;
     color: rgb(204, 153, 0);
     font-size: 36px;
     font-weight: 100;
@@ -560,6 +578,8 @@ nav ul li a {
     background-image: url('../image/devider-small.png');
     position: relative;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .figure-reservations {
@@ -567,7 +587,7 @@ nav ul li a {
 }
 
 .figure-reservations figcaption{
-    font-family: latoregular;
+    font-family: latoregular, Arial, Helvetica, sans-serif;
     font-size: 16px;
     text-align: center;
     line-height: 1.5;
@@ -615,7 +635,7 @@ nav ul li a {
 
 .reservation-form-labels {
     text-decoration: none;
-    font-family: open_sansbold;
+    font-family: open_sansbold, Arial, Helvetica, sans-serif;
     font-size: 14px;
     color:rgb(201, 161, 49);
     display: block;
@@ -641,7 +661,7 @@ input[type="date"]:valid::before {
 .reservation-form input[type="submit"]{
     border: 0px;
     text-decoration: none;
-    font-family: open_sansregular;
+    font-family: open_sansregular, Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: white;
     display: block;
@@ -669,18 +689,18 @@ input[type="date"]:valid::before {
     margin-left: 23px;
     margin-right: 23px;
     width: 350px;
-    font-family: open_sansregular;
+    font-family: open_sansregular, Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: white;
     vertical-align: top;
 }
 
 .footer-text-bold {
-    font-family: open_sansbold;
+    font-family: open_sansbold, Arial, Helvetica, sans-serif;
 }
 
 footer h3 {
-    font-family: yeseva_oneregular;
+    font-family: yeseva_oneregular, Arial, Helvetica, sans-serif;
     color: white;
     font-size: 21px;
     font-weight: 100;
