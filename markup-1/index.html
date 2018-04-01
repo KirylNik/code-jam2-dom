@@ -1,49 +1,44 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <!DOCTYPE html>
         <meta charset="utf-8">
+        <title>Lambda restaurant</title>
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
-            <h1>Lambda Restaurant</h1>
             <div  class="header-content">
-            <a href="" class="logo box"><img src="image/logo.png" alt=""></a>
-            <div class="menu">
-                <nav>
+                <h1>Lambda Restaurant</h1>
+                <img src="image/logo.png" alt="" class="logo">
+                <nav class="menu">
                     <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="index.html">Igredients</a></li>
-                    <li><a href="index.html">Menu</a></li>
-                    <li><a href="index.html">Reviews</a></li>
-                    <li><a href="index.html">Reservations</a></li>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Ingredients">Ingredients</a></li>
+                    <li><a href="#Menu">Menu</a></li>
+                    <li><a href="#Reviews">Reviews</a></li>
+                    <li><a href="#Reservations">Reservations</a></li>
                     </ul>
                 </nav>
-            </div>
-            <div class="social-icon">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <i class="fa fa-youtube" aria-hidden="true"></i>
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-			</div>
+                <div class="social-icon">
+                    <a href="https://twitter.com/lamdadrama"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/lamdafinefoodswines/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
             </div>
         </header>
         <main>
+            <a name="Home"></a>
             <section class="promo">
                 <div class="slogan-text"><h2>the right ingredients for the right food</h2></div>
-                <span class="devider-promo">
-                    <img src="image/devider-big.png" alt="">
-                </span>
-                <a href="#" class="button-book-a-table">BOOK A TABLE</a>
-                <a href="#" class="button-see-the-menu">SEE THE MENU</a>
+                <a href="#Reservations" class="button-book-a-table">Book a table</a>
+                <a href="#Menu" class="button-see-the-menu">See the menu</a>
             </section>
+            <a name="About"></a>
             <section class="about">
-                <article class="article-about">
+                <div class="about-content">
                     <h3>Just the right food</h3>
-                    <span class="devider-about">
-                        <img src="image/devider-small.png" alt="">
-                    </span>
                     <figure class="figure-cook">
                         <figcaption>
                             If you’ve been to one of our restaurants, you’ve seen – and
@@ -56,17 +51,15 @@
                                 <img src="image/cook.png" alt="">
                         </span>
                     </figure>
-                </article>
+                </div>
                 <span class="about-big-picture">
                         <img src="image/about-big-picture.png" alt="">
                 </span>
             </section>
+            <a name="Ingredients"></a>
             <section class="ingredients">
                 <article class="article-ingredients">
                     <h3>Fine ingredients</h3>
-                    <span class="devider-ingredients">
-                        <img src="image/devider-small-gray.png" alt="">
-                    </span>
                         <figure class="figure-ingredients">
                            <figcaption>
                                     If you’ve been to one of our restaurants, you’ve seen – and
@@ -82,13 +75,11 @@
                             </span>
                 </article>
             </section>
+            <a name="Menu"></a>
             <section class="food-menu">
                 <div class="menu-column-left">
                     <section class="category-dishes">
                         <h3>Appetisers</h3>
-                        <span class="devider-menu">
-                                <img src="image/devider-small.png" alt="">
-                        </span>
                         <article class="dish">
                             <h4 class="dish-name">Tzatsiki</h4>
                             <span class="dish-price">$3.99</span>
@@ -107,15 +98,11 @@
                     </section>
                     <section class="category-dishes">
                         <h3>Salads</h3>
-                        <span class="devider-menu">
-                                <img src="image/devider-small.png" alt="">
-                        </span>
                         <article class="dish">
                         <h4 class="dish-name">Olive Special</h4>
                             <span class="dish-price">$5.99</span>
                         <span class="dish-description">Refreshing traditional cucumber and garlic yoghurt dip.</span>
                         </article>
-                        
                         <article class="dish dish-special">
                             <h4 class="dish-name">Greek Salad</h4>
                             <div class="special-label">Special</div>
@@ -132,9 +119,6 @@
                 <div class="menu-column-right">
                     <section class="category-dishes">
                         <h3>Starters</h3>
-                        <span class="devider-menu">
-                                <img src="image/devider-small.png" alt="">
-                        </span>
                         <article class="dish">
                             <h4 class="dish-name">Haloumi</h4>
                             <span class="dish-price">$3.99</span>
@@ -148,9 +132,6 @@
                     </section>
                     <section class="category-dishes">
                         <h3>Main Dishes</h3>
-                        <span class="devider-menu">
-                                <img src="image/devider-small.png" alt="">
-                        </span>
                         <article class="dish">
                             <h4 class="dish-name">Cornish_Mackerel</h4>
                             <span class="dish-price">$5.99</span>
@@ -175,33 +156,31 @@
                     </section>
                 </div>
             </section>
+            <a name="Reviews"></a>
             <section class="reviews">
                 <article class="article-reviews">
                     <h3>Guest Reviews</h3>
-                    <span class="devider-ingredients">
-                        <img src="image/devider-small-gray.png" alt="">
-                    </span>
                     <span class="reviews-quotes">“</span>
-                    <p class="reviews-text">
+                    <blockquote class="reviews-text">
+                        <p>
                         If you’ve been to one of our restaurants, you’ve seen –
                         and tasted – what keeps our customers coming back for
                         more. Perfect materials and freshly baked food,
                         delicious Lambda cakes, muffins, and gourmet coffees 
                         make us hard to resist! Stop in today and check us out!
-                    </p>
-                    <p class="reviews-signature">  food inc, New York</p>
+                        </p>
+                        <p class="reviews-signature">  food inc, New York</p>
+                    </blockquote>
                 </article>
             </section>
+            <a name="Reservations"></a>
             <section class="reservations">
                 <figure class="reservations-pictures">
                     <img src="image/reservations-picture1.jpg" alt="">
                     <img src="image/reservations-picture2.jpg" alt="">
                 </figure>
-                <article class="article-reservations">
+                <div class="reservations-text-info">
                     <h3>Just the right food</h3>
-                    <span class="devider-reservations">
-                        <img src="image/devider-small.png" alt="">
-                    </span>
                     <figure class="figure-reservations">
                         <figcaption>
                             If you’ve been to one of our restaurants, you’ve seen – and
@@ -213,7 +192,7 @@
                             materials and freshly baked food.
                         </figcaption>
                     </figure>
-                </article>
+                </div>
                 <form action="#" method="GET" class="reservation-form">
                     <div class="reservation-input-column-left">
                         <label>
@@ -233,10 +212,10 @@
                         <label>
                             <span class="reservation-form-labels">Party namber</span>
                             <select name="partyNumber" required class="form-element">
-                                    <option value="party namber">party namber *</option>
-                                    <option value="001">001</option>
-                                    <option value="002">002</option>
-                                    <option value="003">003</option> 
+                                <option value="party namber">party namber *</option>
+                                <option value="001">001</option>
+                                <option value="002">002</option>
+                                <option value="003">003</option> 
                             </select>
                         </label>
                     </div>
@@ -246,41 +225,52 @@
         </main>
         <footer>
             <div class="footer-wrapper">
-                <article class="footer-info">
+                <section class="footer-info">
                     <h3>About Us</h3>
                     <span class="devider-footer">
                         <img src="image/devider-very-small-gray.png" alt="">
                     </span>
                     <p>
                         Lambda's new and expanded Chelsea location
-                        represents a truly authentic Greek patisserie,
+                        represents a truly authentic <span class="footer-text-bold">Greek</span> patisserie,
                         featuring breakfasts of fresh croissants and
                         steaming bowls of café.
                         Lamda the best restaurant in town.
                     </p>
-                </article>
-                <article class="footer-info">
+                </section>
+                <section class="footer-info">
                     <h3>Opening Hours</h3>
                     <span class="devider-footer">
                         <img src="image/devider-very-small-gray.png" alt="">
                     </span>
                     <p>
-                        Mon-Thu: 7:00am-8:00pm
+                        <span class="footer-text-bold">Mon-Thu:</span> 7:00am-8:00pm
                         <br>
-                        Fri-Sun: 7:00am-10:00pm
+                        <span class="footer-text-bold">Fri-Sun:</span> 7:00am-10:00pm
                     </p>
-                </article>
-                <article class="footer-info">
+                    <div class="means-of-payment-icon">
+                        <a href="https://www.americanexpress.com/"><i class="fa fa-cc-amex" aria-hidden="true"></i></a>
+                        <a href="https://www.paypal.com/by/home"><i class="fa fa-cc-paypal" aria-hidden="true"></i></i></a>
+                        <a href="https://cis.visa.com/ru_TJ"><i class="fa fa-cc-visa" aria-hidden="true"></i></a>
+                        <a href="https://www.discover.com/"><i class="fa fa-cc-discover" aria-hidden="true"></i></a>
+                    </div>
+                </section>
+                <section class="footer-info">
                     <h3>Our Location</h3>
                     <span class="devider-footer">
                         <img src="image/devider-very-small-gray.png" alt="">
                     </span>
-                    <p>
+                    <p class="footer-text-bold">
                         19th Paradise Street Sitia
                         <br>
                         128 Meserole Avenue
                     </p>
-                </article>
+                    <div class="social-icon-footer">
+                            <a href="https://twitter.com/lamdadrama"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/lamdafinefoodswines/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </div>
+                </section>
             </div>
         </footer>
     </body>

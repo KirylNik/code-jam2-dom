@@ -22,22 +22,21 @@
 
 @font-face {
     font-family: 'open_sansbold';
-    src: url('opensans-bold-webfont.woff2') format('woff2'), url('opensans-bold-webfont.woff') format('woff');
+    src: url('../fonts/opensans-bold-webfont.woff2') format('woff2'), url('../fonts/opensans-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'open_sansitalic';
-    src: url('opensans-italic-webfont.woff2') format('woff2'), url('opensans-italic-webfont.woff') format('woff');
+    src: url('../fonts/opensans-italic-webfont.woff2') format('woff2'), url('../fonts/opensans-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'open_sansregular';
-    src: url('opensans-regular-webfont.woff2') format('woff2'),
-    url('opensans-regular-webfont.woff') format('woff');
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -45,6 +44,10 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+html{
+    height: 100%;
 }
 
 body {
@@ -67,6 +70,7 @@ main {
     flex: 1 0 auto;
     margin-left: auto;
     margin-right: auto;
+  
 }
 
 footer {
@@ -91,14 +95,6 @@ footer {
     margin-top: 47px;
 }
 
-.logo img {
-    transition: all 1s ease-out;
-}
-    
-.logo img:hover{
-    transform: scale(1.1);
-}
-
 .menu {
     margin-left: 213px;
     display: inline-block;
@@ -107,7 +103,7 @@ footer {
 }
 
 header h1 {
-    display: none;
+    font-size: 0px;
 }
 
 nav ul li{
@@ -153,13 +149,18 @@ nav ul li a {
 }
 
 .promo {
-    background-image: url(../image/promo-background.jpg);
+    background-image: url('../image/promo-background.jpg');
     width: 100%;
-    height: 750px;
+    min-height: 670px;
+    font-size: 0px;
+    padding: 40px;
 }
+
 .about {
     width: 100%;
-    height: 710px;
+    min-height: 630px;
+    font-size: 0px;
+    padding: 40px;
 }
 .slogan-text {
     display: inline-block;
@@ -179,10 +180,13 @@ nav ul li a {
     line-height: 1.33;
 }
 
-.devider-promo {
+.slogan-text:after {
+    content: "";
+    width: 232px;
+    height: 43px;
+    background-image: url('../image/devider-big.png');
+    position: relative;
     display: inline-block;
-    margin-left: calc(50% - 113px);
-    margin-top: 108px;
 }
 
 .button-book-a-table {
@@ -200,6 +204,7 @@ nav ul li a {
     margin-left: calc(50% - 244px);
     margin-right: 27px;
     margin-top: 34px;
+    text-transform: uppercase;
 }
 
 .button-book-a-table:hover {
@@ -218,20 +223,21 @@ nav ul li a {
     text-align: center;
     line-height: 3;
     background-color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
 }
 
 .button-see-the-menu:hover {
     background-color: rgba(255,255,255,0.45);
 }
 
-.article-about {
+.about-content {
     margin-left: calc(50% - 515px);
     max-width: 430px;
-    vertical-align: 90px;
+    vertical-align: 89px;
     display: inline-block;
 }
 
-.article-about h3 {
+.about-content h3 {
     font-family: yeseva_oneregular;
     color: rgb(204, 153, 0);
     font-size: 36px;
@@ -239,14 +245,17 @@ nav ul li a {
     text-align: center;
 }
 
-.devider-about {
-    display: block;
-    text-align: center;
-    margin-top: 11px;
+.about-content h3:after {
+    content: "";
+    width: 240px;
+    height: 24px;
+    background-image: url('../image/devider-small.png');
+    position: relative;
+    display: inline-block;
 }
 
 .figure-cook {
-    margin-top: 26px;
+    margin-top: 22px;
 }
 
 .figure-cook figcaption{
@@ -267,22 +276,24 @@ nav ul li a {
 .about-big-picture {
     display: inline-block;
     margin-left: 29px;
-    margin-top: 55px;
 }
 
 .ingredients {
     background-image: url('../image/background_ingredients.jpg');
     width: 100%;
-    height: 758px;
+    min-height: 678px;
+    padding: 40px;
 }
 
 .article-ingredients {
     background-color: rgba(6,8,8,0.6);
     width: 570px;
-    height: 557px;
+    min-height: 557px;
     display: inline-block;
     margin-left: calc(50% + 15px);
     margin-top: 100px;
+    font-size: 0px;
+    padding: 10px;
 }
 
 .article-ingredients h3 {
@@ -294,12 +305,29 @@ nav ul li a {
     margin-top: 75px;
 }
 
-.devider-ingredients {
+.article-ingredients h3:after {
+    content: "";
+    width: 240px;
+    height: 24px;
+    background-image: url('../image/devider-small-gray.png');
+    position: relative;
     display: block;
-    text-align: center;
-    margin-top: 12px;
-    margin-right: 2px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
+.article-reviews h3:after {
+    content: "";
+    width: 240px;
+    height: 24px;
+    background-image: url('../image/devider-small-gray.png');
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .figure-ingredients {
     max-width: 420;
@@ -330,7 +358,10 @@ nav ul li a {
 
 .food-menu {
     width: 100%;
-    height: 994px;
+    min-height: 914px;
+    font-size: 0px;
+    padding: 40px;
+    background-image: url('../image/pattern-menu.png');
 }
 
 .menu-column-left {
@@ -361,13 +392,6 @@ nav ul li a {
     font-size: 36px;
     font-weight: 100;
     text-align: center;
-}
-
-.devider-menu {
-    display: block;
-    text-align: center;
-    margin-top: 11px;
-    margin-bottom: 27px;
 }
 
 .dish-name {
@@ -406,6 +430,15 @@ nav ul li a {
     margin-bottom: 29px;
 }
 
+.category-dishes h3:after {
+    content: "";
+    width: 240px;
+    height: 24px;
+    background-image: url('../image/devider-small.png');
+    background-position: center;
+    display: block;
+}
+
 .dish-special {
     border-right: 1px solid rgb(225, 215, 180);
     border-bottom: 1px solid rgb(225, 215, 180);
@@ -432,18 +465,20 @@ nav ul li a {
 }
 
 .reviews {
-    background-image: url(../image/background_reviews.jpg);
+    background-image: url('../image/background_reviews.jpg');
     width: 100%;
-    height: 758px;
+    min-height: 678px;
+    padding: 40px;
 }
 
 .article-reviews {
     background-color: rgba(0,0,0,0.8);
     width: 770px;
-    height: 557px;
+    min-height: 557px;
     display: inline-block;
     margin-left: calc(50% - 385px);
     margin-top: 100px;
+    padding: 10px;
 }
 
 .article-reviews h3 {
@@ -453,13 +488,6 @@ nav ul li a {
     font-weight: 100;
     text-align: center;
     margin-top: 75px;
-}
-
-.devider-ingredients {
-    display: block;
-    text-align: center;
-    margin-top: 13px;
-    margin-right: 0px;
 }
 
 .reviews-text {
@@ -494,7 +522,9 @@ nav ul li a {
 
 .reservations {
     width: 100%;
-    height: 710px;
+    min-height: 630px;
+    font-size: 0px;
+    padding: 40px;
 }
 
 .reservations-pictures {
@@ -507,7 +537,7 @@ nav ul li a {
     margin-left: 26px;
 }
 
-.article-reservations {
+.reservations-text-info {
     display: inline-block;
     margin-top: 96px;
     width: 420px;
@@ -515,7 +545,7 @@ nav ul li a {
     margin-left: 100px;
 }
 
-.article-reservations h3 {
+.reservations-text-info h3 {
     font-family: yeseva_oneregular;
     color: rgb(204, 153, 0);
     font-size: 36px;
@@ -523,12 +553,17 @@ nav ul li a {
     text-align: center;
 }
 
-.devider-reservations {
+.reservations-text-info h3:after {
+    content: "";
+    width: 240px;
+    height: 24px;
+    background-image: url('../image/devider-small.png');
+    position: relative;
     display: block;
-    text-align: center;
-    margin-top: 12px;
-    margin-left: 5px;
-    margin-bottom: 27px;
+}
+
+.figure-reservations {
+    padding-bottom: 20px;
 }
 
 .figure-reservations figcaption{
@@ -625,7 +660,9 @@ input[type="date"]:valid::before {
     margin-right: auto;
     width: 1600px;
     text-align: center;
-    margin-top: 56px;
+    margin-top: 16px;
+    font-size: 0px;
+    padding: 40px;
 }
 .footer-info {
     display: inline-block;
@@ -636,6 +673,10 @@ input[type="date"]:valid::before {
     font-size: 16px;
     color: white;
     vertical-align: top;
+}
+
+.footer-text-bold {
+    font-family: open_sansbold;
 }
 
 footer h3 {
@@ -650,4 +691,24 @@ footer h3 {
     margin-top: 14px;
     margin-bottom: 20px;
     display: block;
+}
+
+.social-icon-footer i{
+    color: white;
+    font-size: 16px;
+    padding-right: 6px;
+}
+
+.social-icon-footer i:hover {
+    color: #dab33e;;
+}
+
+.means-of-payment-icon i{
+    color: white;
+    font-size: 16px;
+    padding-right: 6px;
+}
+
+.means-of-payment-icon i:hover {
+    color: #dab33e;;
 }
