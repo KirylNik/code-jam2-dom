@@ -65,9 +65,6 @@ header {
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
 }
 
-main {
-}
-
 footer {
     width: 100%;
     height: 320px;
@@ -157,6 +154,32 @@ nav ul li a {
     font-size: 0px;
     padding: 40px;
 }
+
+.ingredients {
+    background-image: url('../image/background_ingredients.jpg');
+    width: 100%;
+    min-height: 678px;
+    padding: 40px;
+}
+
+.food-menu {
+    width: 100%;
+    min-height: 914px;
+    font-size: 0px;
+    padding: 40px 40px 33px 40px;
+    background-image: url('../image/pattern-menu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.reviews {
+    background-image: url('../image/background_reviews.jpg');
+    width: 100%;
+    min-height: 678px;
+    padding: 40px;
+}
+
 .slogan-text {
     display: inline-block;
     height: 150px;
@@ -277,13 +300,6 @@ nav ul li a {
     margin-left: 29px;
 }
 
-.ingredients {
-    background-image: url('../image/background_ingredients.jpg');
-    width: 100%;
-    min-height: 678px;
-    padding: 40px;
-}
-
 .article-ingredients {
     background-color: rgba(6,8,8,0.6);
     width: 550px;
@@ -364,17 +380,6 @@ nav ul li a {
     border-radius: 50%;
     border: 5px solid rgba(74,65,58,0.5);
     margin-right: 30px;
-}
-
-.food-menu {
-    width: 100%;
-    min-height: 914px;
-    font-size: 0px;
-    padding: 40px 40px 33px 40px;
-    background-image: url('../image/pattern-menu.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 .menu-column-left {
@@ -479,13 +484,6 @@ nav ul li a {
     top: -32px;
 }
 
-.reviews {
-    background-image: url('../image/background_reviews.jpg');
-    width: 100%;
-    min-height: 678px;
-    padding: 40px;
-}
-
 .article-reviews {
     background-color: rgba(0,0,0,0.8);
     width: 750px;
@@ -554,10 +552,10 @@ nav ul li a {
 
 .reservations-text-info {
     display: inline-block;
-    margin-top: 66px;
+    margin-top: 56px;
     width: 420px;
     vertical-align: top;
-    margin-left: 100px;
+    margin-left: 104px;
 }
 
 .reservations-text-info h3 {
@@ -577,6 +575,8 @@ nav ul li a {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 28px;
 }
 
 .figure-reservations {
@@ -605,18 +605,23 @@ nav ul li a {
     font-size: 16px;
     color:rgb(124, 124, 124);
     display: inline-block;
-    width: 200px;
-    height: 36px;
+    width: 184px;
+    height: 35px;
     text-align: right;
     line-height: 3;
     background-color: rgba(255,255,255,0.25);
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     padding-left: 15px;
     text-align: left;
 }
+
+.form-element[name="partyNumber"]  {
+    width: 200px;
+}
+
 .reservation-input-column-left {
     display: inline-block;
-    margin-right: 26px;
+    margin-right: 29px;
 }
 
 .reservation-input-column-right {
@@ -624,10 +629,10 @@ nav ul li a {
 }
 
 .reservation-form {
-    display: inline-block;
-    max-width: 480px;
-    margin-left: calc(50% + 85px);
-    margin-top: -214px;
+    display: block;
+    max-width: 434px;
+    margin-left: calc(50% + 55px);
+    margin-top: -215px;
 }
 
 .reservation-form-labels {
@@ -668,28 +673,31 @@ input[type="date"]:valid::before {
     background-color: rgb(201,161,49);
     margin-left: auto;
     margin-right: auto;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .footer-wrapper {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1600px;
     text-align: center;
     margin-top: 16px;
+    margin-left: 23px;
     font-size: 0px;
     padding: 40px;
 }
+
 .footer-info {
     display: inline-block;
-    margin-left: 23px;
-    margin-right: 23px;
+    margin-left: 25px;
+    margin-right: 25px;
     width: 350px;
     font-family: open_sansregular, Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: white;
     vertical-align: top;
+}
+
+.footer-info p{
+    line-height: 1.5;
 }
 
 .footer-text-bold {
@@ -704,28 +712,45 @@ footer h3 {
     text-align: center;
 }
 
-.devider-footer {
-    margin-top: 14px;
-    margin-bottom: 20px;
+.footer-info h3:after {
+    content: "";
+    width: 199px;
+    height: 19px;
+    background-image: url('../image/devider-very-small-gray.png');
+    position: relative;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+    margin-bottom: 18px;
 }
 
-.social-icon-footer i{
-    color: white;
-    font-size: 16px;
-    padding-right: 6px;
-}
-
-.social-icon-footer i:hover {
-    color: #dab33e;;
+.means-of-payment-icon {
+    margin-top: 47px;
+    margin-left: 12px;
 }
 
 .means-of-payment-icon i{
     color: white;
     font-size: 16px;
-    padding-right: 6px;
+    padding-right: 8px;
 }
 
 .means-of-payment-icon i:hover {
+    color: #dab33e;;
+}
+
+.social-icon-footer {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.social-icon-footer i{
+    color: white;
+    font-size: 16px;
+    padding-right: 9px;
+}
+
+.social-icon-footer i:hover {
     color: #dab33e;;
 }
