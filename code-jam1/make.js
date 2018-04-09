@@ -3,7 +3,7 @@ function make(...array) {
     
     function fun(...array) {  
         if (typeof array[0] == 'function') {  // Если передана функция, то применить функцию к аргументам и вернуть ответ.
-            return(bufferArray.reduce(array[0], 0)); 
+            return(bufferArray.reduce(array[0])); 
         }
         bufferArray = bufferArray.concat(array); // Иначе добавить аргументы к буферу.
         return fun;
