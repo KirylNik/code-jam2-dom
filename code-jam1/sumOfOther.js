@@ -1,8 +1,3 @@
-<head>
-</head
-<body>
-<script>
-
 function sumOfOther(array) {
     let result = [];
     for (let i = 0; i < array.length; i++) {
@@ -14,13 +9,4 @@ function sumOfOther(array) {
         result.push(sumOtherElem);
     }
     return(result);
-}
-
-let test1 = sumOfOther([2, 3, 4, 1]);
-let test2 = sumOfOther([0, -3, 4, -1]);
-let test3 = sumOfOther([-1, 0, 0, 0]);
-console.log(test1);
-console.log(test2);
-console.log(test3);
-</script>
-</body>
+};
