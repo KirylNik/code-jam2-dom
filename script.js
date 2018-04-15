@@ -22,13 +22,14 @@ function displayNotification() {
         document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif + 1})`).style.color = 'gray';
             notifMessegeArea.innerHTML = arrayNotification[0];
             displayNotification.currentNotif = 0;
-        document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif + 1})`).style.color = 'blue';
+            document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif + 1})`).style.color = 'blue';
         } else {
         displayNotification.currentNotif++;
         notifMessegeArea.innerHTML = arrayNotification[displayNotification.currentNotif];
-        }
         document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif})`).style.color = 'gray';
-        document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif + 1})`).style.color = 'blue';
+        document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif + 1})`).style.color = 'blue';    
+    }
+        
     };
 
     displayNotification.notificationPrev.onclick = function() {
