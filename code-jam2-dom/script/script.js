@@ -7,82 +7,109 @@ let str5 = 'Fact #5: Billy goats urinate on their own heads to smell more attrac
 
 let arrayNotification = [str1, str2, str3, str4, str5];
 
-// Функция компонента.
-function displayNotification() {
-    // Если сообщений болше одного, то создать слайдер сообщений.
-    if (arrayNotification.length > 1) {
-        // Создать тело слайдера.
-        document.body.querySelector('.notification-slider').innerHTML = '<i class="fas fa-angle-left button-notification button-notification-prev"></i><div class="notification-slider-points"></div><i class="fas fa-angle-right button-notification button-notification-next"></i>';
-        //Наполнить слайдер необходимым количеством точек.
-        for (let i = 0; i < arrayNotification.length; i++) {
-            document.body.querySelector('.notification-slider-points').innerHTML += '<i class="fas fa-circle"></i>';
-        }
-    };
-    // Получить в переменные сам натификатор и поле для записи текста.
-    let elemNotification = document.body.querySelector('.notification');
-    let notifMessegeArea = document.body.querySelector('.notification-messege');
-    // Записать в поле для текста первое сообщение.
-    notifMessegeArea.innerHTML = arrayNotification[0];
-    // Установить флаг с номером текущего сообщения, для работы слайдера.
-    displayNotification.currentNotif = 0;
-    // Отметить первый элемент слайдера.
-    document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif + 1})`).style.color = 'blue';
-    // Получить DOM-элементы кнопок для листания слайдера.
-    displayNotification.notificationPrev = document.body.querySelector('.button-notification-prev');
-    displayNotification.notificationNext = document.body.querySelector('.button-notification-next');
-    // Установить обработчик для кнопки вперёд.
-    displayNotification.notificationNext.onclick = function() {
-        if (displayNotification.currentNotif == arrayNotification.length - 1) {
-        document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif + 1})`).style.color = 'gray';
-            notifMessegeArea.innerHTML = arrayNotification[0];
-            displayNotification.currentNotif = 0;
-            document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif + 1})`).style.color = 'blue';
-        } else {
-        displayNotification.currentNotif++;
-        notifMessegeArea.innerHTML = arrayNotification[displayNotification.currentNotif];
-        document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif})`).style.color = 'gray';
-        document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif + 1})`).style.color = 'blue';    
+class Notification {
+
+    constructor(arrayMess) {
+        this.arrayMessage = arrayMess;
+        this.createNotifiSlider();
+        this.writeStartMessege();
+        this.createNotifiSliderButton()
+        this.createCloseButton();
+        this.addKeyboardControl();
+        this.displayNotification();
+    }
+
+    createNotifiSlider() {
+        // Если сообщений болше одного, то создать слайдер сообщений.
+        if (this.arrayMessage.length > 1) {
+            // Создать тело слайдера.
+            document.body.querySelector('.notification-slider').innerHTML = '<i class="fas fa-angle-left button-notification button-notification-prev"></i><div class="notification-slider-points"></div><i class="fas fa-angle-right button-notification button-notification-next"></i>';
+            //Наполнить слайдер необходимым количеством точек.
+            for (let i = 0; i < this.arrayMessage.length; i++) {
+                document.body.querySelector('.notification-slider-points').innerHTML += '<i class="fas fa-circle"></i>';
+            };
         };
-    };
-    // Установить обработчик для кнопки назад.
-    displayNotification.notificationPrev.onclick = function() {
-        if (displayNotification.currentNotif == 0) {
-            document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${arrayNotification.length})`).style.color = 'blue';
-            document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(1)`).style.color = 'gray';
-            notifMessegeArea.innerHTML = arrayNotification[arrayNotification.length - 1];
-            displayNotification.currentNotif = arrayNotification.length - 1;
-        } else {
-            document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif})`).style.color = 'blue';
-            document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${displayNotification.currentNotif + 1})`).style.color = 'gray';
-            displayNotification.currentNotif--;
-            notifMessegeArea.innerHTML = arrayNotification[displayNotification.currentNotif];
+    }
+
+    createNotifiSliderButton() {
+        // Получить DOM-элементы кнопок для листания слайдера.
+        this.notificationNext = document.body.querySelector('.button-notification-next');
+        this.notificationPrev = document.body.querySelector('.button-notification-prev');
+        // Установить обработчик для кнопки вперёд.
+        this.notificationNext.onclick = () => {
+            if (this.currentNotif == this.arrayMessage.length - 1) {
+                document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${this.currentNotif + 1})`).style.color = 'gray';
+                this.notifMessegeArea.innerHTML = this.arrayMessage[0];
+                this.currentNotif = 0;
+                document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${this.currentNotif + 1})`).style.color = 'blue';
+            } else {
+                this.currentNotif++;
+                this.notifMessegeArea.innerHTML = this.arrayMessage[this.currentNotif];
+                document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${this.currentNotif})`).style.color = 'gray';
+                document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${this.currentNotif + 1})`).style.color = 'blue';    
+            };
         };
-    };
-    // Получить DOM-элемент кнопки закрытия.
-    displayNotification.notificationClose = document.body.querySelector('.notification-close')
-    // Установить обработчик для кнопки закрытия.
-    displayNotification.notificationClose.onclick = function () {
+
+        // Установить обработчик для кнопки назад.
+        this.notificationPrev.onclick = () => {
+            if (this.currentNotif == 0) {
+                document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${this.arrayMessage.length})`).style.color = 'blue';
+                document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(1)`).style.color = 'gray';
+                this.notifMessegeArea.innerHTML = this.arrayMessage[this.arrayMessage.length - 1];
+                this.currentNotif = this.arrayMessage.length - 1;
+            } else {
+                document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${this.currentNotif})`).style.color = 'blue';
+                document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${this.currentNotif + 1})`).style.color = 'gray';
+                this.currentNotif--;
+                this.notifMessegeArea.innerHTML = this.arrayMessage[this.currentNotif];
+            };
+        };
+    }
+
+    createCloseButton() {
+        // Получить DOM-элемент кнопки закрытия.
+        this.notificationClose = document.body.querySelector('.notification-close')
+        // Установить обработчик для кнопки закрытия.
+        this.notificationClose.onclick = () => {
         if (document.body.querySelector('[name="disableNotification"]').checked) {
             localStorage.setItem('disableNotification','true')
         };
-        elemNotification.style.display = 'none';
-    };
-    // Обратка для листания и закрытия сообщений клавиатурой.
-    document.onkeydown = function (event) {
-        if (event.keyCode == 37) {
-            displayNotification.notificationPrev.onclick();
+        this.elemNotification.style.display = 'none';
         };
-        if (event.keyCode == 39) {
-            displayNotification.notificationNext.onclick();
+    }
+
+    writeStartMessege() {
+        // Получить в переменные сам натификатор и поле для записи текста.
+        this.elemNotification = document.body.querySelector('.notification');
+        this.notifMessegeArea = document.body.querySelector('.notification-messege');
+        // Записать в поле для текста первое сообщение.
+        this.notifMessegeArea.innerHTML = this.arrayMessage[0];
+        // Установить флаг с номером текущего сообщения, для работы слайдера.
+        this.currentNotif = 0;
+        // Отметить первый элемент слайдера.
+        document.body.querySelector('.notification-slider-points').querySelector(`:nth-child(${this.currentNotif + 1})`).style.color = 'blue';
+    }
+    
+    addKeyboardControl() {
+        document.onkeydown = () => {
+            if (event.keyCode == 37) {
+                this.notificationPrev.onclick();
+            };
+            if (event.keyCode == 39) {
+                this.notificationNext.onclick();
+            };
+            if (event.keyCode == 27) {
+                this.notificationClose.onclick();
+            };
         };
-        if (event.keyCode == 27) {
-            displayNotification.notificationClose.onclick();
+    }
+
+    displayNotification() {
+        if (!localStorage.getItem('disableNotification')) {
+            this.elemNotification.style.display = 'block';
         };
-    };
-    // Отобразить натификацию, если пользователь не установил галочку о запрете показа. 
-    if (!localStorage.getItem('disableNotification')) {
-        elemNotification.style.display = 'block';
-    };
+    }
 };
 
-setTimeout(displayNotification, 1000);
+let notificationFacts = new Notification(arrayNotification);
+
